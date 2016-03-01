@@ -12,9 +12,9 @@ gulp.task('development', function() {
     .pipe(coffee({ bare: true }))
     //.pipe(uglify())
     .pipe(gulp.dest('./dist/source'));
-
-  gulp.src('./src/scss/*.scss')
-    .pipe(watch('./src/scss/*.scss'))
-    .pipe(sass({ outputStyle: 'expanded' }))
-    .pipe(gulp.dest('./dist/css'))
+  //
+  //gulp.src('./src/scss/*.scss')
+  //  .pipe(watch('./src/scss/*.scss'))
+  //  .pipe(sass({ outputStyle: 'expanded' }))
+  //  .pipe(gulp.dest('./dist/css'))
 });

@@ -1,3 +1,9 @@
+/*! ==========================================================================
+ * pongstagr.am v3.0.4 jQuery Plugin | http://pongstr.github.io/pongstagr.am/
+ * ===========================================================================
+ * Copyright (c) 2014 Pongstr Ordillo. Licensed under MIT License.
+ * =========================================================================== */
+
 (function() {
   'use strict';
   var Pongstgrm;

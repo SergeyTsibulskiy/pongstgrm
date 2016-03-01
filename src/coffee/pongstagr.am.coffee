@@ -20,6 +20,7 @@ do ->
     likes:        true        # {Boolean}: show/hide likes count.
     comments:     true        # {Boolean}: show/hide comments
     timestamp:    true        # {Boolean}: show/hide media timestamp.
+    username:    true        # {Boolean}: show/hide media username.
     flexbox:      true        # {Boolean|String}: if true/false it uses the built-in flexbox in the css, otherwise it will use custom-styles set for that selector
 
     # Plugin Components
@@ -59,6 +60,9 @@ do ->
       created = that.options.timestamp and "
         #{new Date(context.created_time * 1000).toDateString()}"
 
+      username = that.options.username and "
+        #{options.data.username}"
+
       return "
         <div class='pongstgrm-item'>
           <div class='pongstgrm-item-content'>
@@ -67,6 +71,7 @@ do ->
               src='#{context.images.low_resolution.url}'
               width='#{context.images.low_resolution.width}'
               height='#{context.images.low_resolution.height}'>#{video}
+            <div class='user-name'>#{username}</div>
             <div class='pongstgrm-item-toolbar'>
               #{likes_html} &nbsp; &nbsp; #{comments_html}
             </div>
